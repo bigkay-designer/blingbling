@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {useStateValue} from '../StateProvider'
+import { getBasketTotal } from "../reducer";
 import {Link, useHistory, useLocation} from 'react-router-dom'
 import {Close, Delete} from '@material-ui/icons'
 import {Button} from '@material-ui/core'
@@ -7,27 +8,14 @@ import '../css/Checkout.css'
 function Checkout() {
     const {pathname} = useLocation()
     let hitoryPathUrl = useHistory()
+    const [{basket}] = useStateValue()
 
-    const [{basket}, dispatch] = useStateValue()
-    const removeItem = (e)=>{
-        dispatch({
-
-        })
-    }
-
-    let total = 0;
-
-    const addToBasket = () => {
-        basket.forEach(item=>{
-            let result = total += item.price
-            return result.toFixed(2)
-        })
-    }
-    addToBasket()
     const topPage = ()=>{
         window.scrollTo(0, 0);
         hitoryPathUrl.goBack()
     }
+
+    let value = getBasketTotal(basket)
     return (
         <div className="checkout">
             <div className="checkout__header">
@@ -71,7 +59,7 @@ function Checkout() {
                 ))}
             </div>
             <div className="total">
-                <h3>Total: £{total}</h3>
+                <h3>Total: £{value}</h3>
             </div>
             <div className="paynow">
                 <Button>Pay Now</Button>

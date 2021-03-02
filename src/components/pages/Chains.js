@@ -31,7 +31,7 @@ function Watches() {
                 id='9292929'
                 img="http://pngimg.com/uploads/necklace/necklace_PNG129.png"
                 price={20.99}
-                title="Classing Casio"
+                title="Classing Casio casio"
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt."
             />
         </div>
