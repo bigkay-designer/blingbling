@@ -74,11 +74,13 @@
 
 .product__pages .products__container .products {
   width: 95%;
-  margin: 20px auto;
+  margin: 0px auto;
   -webkit-box-shadow: 0px 2px 7px grey;
           box-shadow: 0px 2px 7px grey;
   padding: 10px 10px 20px;
   border-radius: 7px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .product__pages .products__container .products .icon__div {
@@ -114,8 +116,8 @@
 }
 
 .product__pages .products__container .products .img img {
-  max-width: 160px;
-  height: 160px;
+  max-width: 130px;
+  height: 130px;
 }
 
 .product__pages .products__container .products .product__body {
@@ -135,5 +137,16 @@
 
 .product__pages .products__container .products .product__body p {
   color: #616161;
+}
+
+.product__pages .products__container .products .add__to__basket {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.product__pages .products__container .products .add__to__basket button {
+  width: 100%;
+  background-color: #07AE72;
+  color: white;
 }
 /*# sourceMappingURL=Product.css.map */

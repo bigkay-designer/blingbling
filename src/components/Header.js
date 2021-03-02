@@ -1,12 +1,24 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import {useStateValue} from './StateProvider'
+import {Link, useLocation} from 'react-router-dom'
 import {Menu, Close, ShoppingBasket, Search} from '@material-ui/icons'
 import {Button} from '@material-ui/core'
 import './css/Header.css'
 function Header() {
+
+    const [{basket}, dispatch] = useStateValue()
+
+
+
     const [openNav, setOpenNav] = useState(false)
     const [openSearchInput, setOpenSearchInput] = useState(false)
-
+    const { pathname } = useLocation();
+    
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [pathname]);
+    
+    
     return (
         <div className="header">
             <div className="header__wrapper">
@@ -17,7 +29,12 @@ function Header() {
                     <h2> <Link to='/'>BLINGBLING</Link> </h2>
                 </div>
                 <div className="header__cart">
-                    <ShoppingBasket className="icon" />
+                    <Link to="checkout">
+                        <ShoppingBasket className="icon" />
+                        <div className="item__in__basket">
+                            <span>{basket?.length}</span>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className={` header__nav__container ${openNav && "show__nav"} `}>

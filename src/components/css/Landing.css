@@ -9,19 +9,40 @@
 }
 
 .landing .showCase {
-  background: -webkit-gradient(linear, left top, left bottom, from(#00485F), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0))), rgba(138, 167, 180, 0.8);
-  background: linear-gradient(180deg, #00485F 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(138, 167, 180, 0.8);
+  background: url("https://img.lovepik.com/photo/40012/1857.jpg_wh860.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 15px 20px 0;
+  position: relative;
+  z-index: -2;
+}
+
+.landing .showCase .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(#141313), to(rgba(255, 255, 255, 0))), rgba(138, 167, 180, 0.8);
+  background: linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #141313 0%, rgba(255, 255, 255, 0) 100%), rgba(138, 167, 180, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
 }
 
 .landing .showCase .title {
+  z-index: 100;
   padding: 0 10px;
   margin: 10px 0;
 }
 
 .landing .showCase .title p {
-  color: #fff;
+  z-index: 100;
+  color: #e9e9e9;
   text-align: center;
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
 }
 
 .landing .showCase img {
@@ -105,6 +126,7 @@
 }
 
 .landing .featured__products .wrapper .product {
+  margin-top: 10px;
   margin-left: 20px;
   width: 100%;
 }
@@ -127,8 +149,8 @@
 
 .landing .delivery__info {
   margin: 70px 0 30px;
-  -webkit-box-shadow: 0px 1px 7px grey;
-          box-shadow: 0px 1px 7px grey;
+  -webkit-box-shadow: 0px 1px 3px grey;
+          box-shadow: 0px 1px 3px grey;
   padding: 10px;
 }
 
@@ -140,18 +162,22 @@
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 20px 0;
-  -webkit-box-shadow: 0px 0px 3px rgba(139, 139, 139, 0.6);
-          box-shadow: 0px 0px 3px rgba(139, 139, 139, 0.6);
   padding: 10px;
+}
+
+.landing .delivery__info .body .icon__div {
+  border: 1px solid #646464;
+  padding: 10px;
+  border-radius: 360px;
 }
 
 .landing .delivery__info .body h3 {
   font-weight: 400;
-  padding-left: 10px;
+  padding-left: 20px;
   color: #000000;
 }
 
 .landing .delivery__info .body .icon {
-  color: #080303;
+  color: #414141;
 }
 /*# sourceMappingURL=Landing.css.map */

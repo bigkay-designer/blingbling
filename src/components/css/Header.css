@@ -33,8 +33,27 @@
   text-decoration: none;
 }
 
+.header .header__wrapper .header__cart {
+  position: relative;
+}
+
+.header .header__wrapper .header__cart a {
+  text-decoration: none;
+}
+
 .header .header__wrapper .header__cart .icon {
+  cursor: pointer;
   color: #00233f;
+}
+
+.header .header__wrapper .header__cart .item__in__basket {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  background: blueviolet;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 50%;
 }
 
 .header .header__wrapper .header__small__nav .icon {

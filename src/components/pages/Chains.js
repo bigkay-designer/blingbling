@@ -1,7 +1,7 @@
 import React from 'react'
 import {Search,FavoriteBorder} from '@material-ui/icons'
 import {Button} from '@material-ui/core'
-import '../css/Product.css'
+import Product from '../Product'
 function Watches() {
     return (
         <div className="product__pages chains">
@@ -20,57 +20,20 @@ function Watches() {
                 <img src="http://www.2020pv.co.uk/wp-content/uploads/2018/05/Jewellery_Blue-Christmas.jpg" alt=""/>
             </section>
             <div className="current__link">
-                <span>watches</span>
+                <span>chains</span>
             </div>
             <section className="product__filter">
                 <button>Sort</button>
                 <button>Filter</button>
             </section>
 
-            <section className="products__container">
-                <div className="products">
-                    <div className="icon__div">
-                        <FavoriteBorder className="icon" />
-                    </div>
-                    <div className="img">
-                        <img src="http://pngimg.com/uploads/necklace/necklace_PNG129.png" alt=""/>
-
-                    </div>
-                    <div className="product__body">
-                        <span className="price">£9.99</span>
-                        <h3 className="product__title">Classing Casio</h3>
-                        <p className="product__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt.</p>
-                    </div>
-                </div>
-                <div className="products">
-                    <div className="icon__div">
-                        <FavoriteBorder className="icon" />
-                    </div>
-                    <div className="img">
-                        <img src="https://lh3.googleusercontent.com/proxy/hTQmn1zM-ltl-cyKayaYCXVqAr7TkWZF7iF6ZX_Vix0hUMaKM_prOFvmAc-5kvotDP1mVya5P6JJQDr6VVSehKWEK0lSnWO7GUEeod0Yp2scvFkRVGA_wEy42g" alt=""/>
-
-                    </div>
-                    <div className="product__body">
-                        <span className="price">£9.99</span>
-                        <h3 className="product__title">Classing Casio</h3>
-                        <p className="product__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt.</p>
-                    </div>
-                </div>
-                <div className="products">
-                    <div className="icon__div">
-                        <FavoriteBorder className="icon" />
-                    </div>
-                    <div className="img">
-                        <img src="https://pngimg.com/uploads/necklace/necklace_PNG69.png" alt=""/>
-
-                    </div>
-                    <div className="product__body">
-                        <span className="price">£9.99</span>
-                        <h3 className="product__title">Classing Casio</h3>
-                        <p className="product__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt.</p>
-                    </div>
-                </div>
-            </section>
+            <Product  
+                id='9292929'
+                img="http://pngimg.com/uploads/necklace/necklace_PNG129.png"
+                price={20.99}
+                title="Classing Casio"
+                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt."
+            />
         </div>
     )
 }

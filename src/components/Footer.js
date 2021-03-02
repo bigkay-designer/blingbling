@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer">
             <div className="newsletter">
                 <div className="title">
-                    <h2>Sign to our newsletter</h2>
+                    <h2>Sign up to our newsletter</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vel.</p>
                 </div>
                 <div className="input">

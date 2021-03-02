@@ -5,6 +5,8 @@ import {LocalShipping, CalendarToday, Public} from '@material-ui/icons'
 import {Button} from '@material-ui/core'
 import '../css/ProductInfo.css'
 function ProductInfo() {
+
+
     return (
         <div className="product__info">
             <section className={`search`}>
@@ -19,8 +21,10 @@ function ProductInfo() {
                 </form>
             </section>
             <div className="back__btn">
-                <ArrowBack />
-                <button>Back</button>
+                <div className="wrapper">
+                    <ArrowBack />
+                    <button>Back</button>
+                </div>
             </div>
             <section className="products__container">
                 <div className="products">
@@ -50,7 +54,7 @@ function ProductInfo() {
                 <h3 className="title">Delivery Information</h3>
                 <div className="btn__div">
                     <ShoppingCart />
-                    <Button>add to bag</Button>
+                    <Button>add to basket</Button>
                 </div>
                 <div className="other__btn">
                     <div className="icon__div favourite">
@@ -152,15 +156,21 @@ function ProductInfo() {
                     <h3>Delivery Information</h3>
                 </div>
                 <div className="body">
-                    <LocalShipping className="icon" />
+                    <div className="icon__div">
+                        <LocalShipping className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
                 <div className="body">
-                    <CalendarToday className="icon" />
+                    <div className="icon__div">
+                        <CalendarToday className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
                 <div className="body">
-                    <Public className="icon" />
+                    <div className="icon__div">
+                        <Public className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
             </section>

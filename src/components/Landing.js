@@ -5,6 +5,7 @@ function Landing() {
     return (
         <div className="landing">
             <section className="showCase">
+                <div className="overlay"></div>
                 <div className="title">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo eligendi dolor. Nobis reiciendis ducimus ad dolorem porro quisquam laboriosam?</p>
 
@@ -67,15 +68,21 @@ function Landing() {
                     <h3>Delivery Information</h3>
                 </div>
                 <div className="body">
-                    <LocalShipping className="icon" />
+                    <div className="icon__div">
+                        <LocalShipping className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
                 <div className="body">
-                    <CalendarToday className="icon" />
+                    <div className="icon__div">
+                        <CalendarToday className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
                 <div className="body">
-                    <Public className="icon" />
+                    <div className="icon__div">
+                        <Public className="icon" />
+                    </div>
                     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
                 </div>
             </section>

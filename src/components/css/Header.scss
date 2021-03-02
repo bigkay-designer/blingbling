@@ -23,8 +23,22 @@
             }
         }
         .header__cart{
+            position: relative;
+            a{
+                text-decoration: none;
+            }
             .icon{
+                cursor: pointer;
                 color: rgb(0, 35, 63);
+            }
+            .item__in__basket{
+                position: absolute;
+                top: -5px;
+                left: -15px;
+                background: blueviolet;
+                color: #fff;
+                padding: 3px 7px;
+                border-radius: 50%;
             }
         }
 
