@@ -1,0 +1,246 @@
+.product__info{
+    margin-top: 52px;
+    .search{
+        form{
+            width: 100%;
+            margin: 0 auto;
+            .input__field{
+                display: flex;
+                align-items: center;
+                border: 1px solid rgba(34, 34, 34, 0.5);
+                padding: 5px 10px;
+                input{
+                    font-size: 16px;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+            .search__btn{
+                margin-top: 10px;
+                button{
+                    width: 100%;
+                    background-color:#07AE72 ;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .back__btn{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0 10px;
+        button{
+            cursor: pointer;
+            margin-left: 7px;
+        }
+    }
+
+    .products__container{
+        .products{
+            width: 100%;
+            margin: 20px auto;
+            border-radius: 7px;
+            .icon__div{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .icon{
+                    max-width: fit-content;
+                    color: rgba(51, 51, 51, 0.7);
+                    cursor: pointer;
+                }
+            }
+            .img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 1px 3px rgba(156, 156, 156, 0.6);
+                padding: 10px 0;
+                width: 95%;
+                margin: 0 auto;
+                img{
+                    max-width: 160px;
+                    height: 160px;
+                }
+            }
+
+            .product__body{
+                margin: 20px 0 ;
+                border-top: 1px solid grey;
+                padding: 10px 0 10px 20px;
+                cursor: pointer;
+                span{
+                    color: rgb(65, 65, 65);
+                }
+                h3{
+                    font-weight: 600;
+                    margin: 10px 0;
+                }
+                p{
+                    color: rgb(97, 97, 97);
+                }
+            }
+            .product__review{
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                svg{
+                    color: goldenrod;
+                }
+            }
+        }
+    }
+    .add__to__bag{
+        padding: 10px 0 10px 20px;
+        border-top: 1px solid grey;    
+        .title{
+            margin-bottom: 15px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .btn__div{
+            display: flex;
+            align-items: center;
+            width: 85%;
+            margin: 0 auto;
+            button{
+                background-color: #07AE72;
+                color: #fff;
+                width: 100%;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+        .other__btn{
+            margin-top: 30px;
+            .icon__div{
+                display: flex;
+                align-items: center;
+                margin: 10px 0;
+                span{
+                    padding-left: 10px;
+                    color: rgb(66, 66, 66);
+                }
+            }
+        }
+    }
+    .similar__products{
+        .title{
+            h3{
+                text-align: center;
+                font-weight: 500;
+                margin: 20px 0 10px;
+            }
+        }
+        .container{
+            position: relative;
+            border-top: 1px solid grey;
+            padding: 10px 5px ;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            max-width: 100%;
+            height: 240px;
+            margin: 0 auto;
+            box-shadow: 0px 1px 3px grey;
+        }
+        .wrapper{
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .product{
+                flex: 1 1;
+                min-width: 160px;
+                justify-content: flex-start;
+                padding: 15px 20px;
+                cursor: pointer;
+                .img{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        max-width: 160px;
+                        height: 160px;
+                    }
+                }
+                .price{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .review{
+        margin-top: 50px;
+        .title{
+            text-align: center;
+            h3{
+                font-weight: 500;
+            }
+        }
+        .wrapper{
+            width: 95%;
+            margin: 0 auto;
+
+            .review__body{
+                border: 1px solid grey;
+                box-shadow: 0px 2px 4px grey;
+                padding: 10px 15px;
+                margin: 10px 0 20px;
+                .icon__div{
+                    svg{
+                        color: goldenrod;
+                    }
+                }
+                p{
+                    margin: 20px 0;
+                }
+                span{
+                    font-weight: 600;
+                }
+                .date{
+                    font-weight: normal;
+                    margin-left: 10px;
+                    color: rgb(94, 94, 94);
+                }
+
+            }
+        }
+    }
+
+    .delivery__info{
+        margin: 50px 0 30px;
+        box-shadow: 0px 1px 7px grey;
+        padding: 10px;
+        .title{
+            text-align: center;
+            h3{
+                font-weight: 500;
+
+            }
+        }
+        .body{
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            box-shadow: 0px 0px 3px rgba(139, 139, 139, 0.6);
+            padding: 10px;
+            h3{
+                font-weight: 400;
+                padding-left: 10px;
+                color: #000000;
+            }
+            .icon{
+                color: rgb(8, 3, 3);
+            }
+        }
+    }
+}

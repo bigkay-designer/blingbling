@@ -1,0 +1,118 @@
+.landing{
+    margin-top: 50px;
+    .title{
+        h3{
+            text-align: center;
+            text-transform: capitalize;
+            color: rgb(82, 82, 82);
+        }
+    }
+    .showCase{
+        background: linear-gradient(180deg, #00485F 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(138, 167, 180, 0.8);
+        padding: 15px 20px 0;
+        .title{
+            padding: 0 10px;
+            margin: 10px 0;
+            p{
+                color: #fff;
+                text-align: center;
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .welcome__msg{
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+        h2{
+            font-weight: 600;
+        }
+        p{
+            margin-top: 10px;
+            color: #042C52;
+        }
+    }
+    .top__collection{
+        margin-top: 50px;
+        .wrapper{
+            width: 90%;
+            margin: auto;
+            .product{
+                margin: 30px 0 0;
+                box-shadow: 0px 3px 7px rgb(197, 197, 197);
+                padding: 10px;
+                .img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img{
+                    max-width: 200px;
+                    height: 200px;
+                }
+                h3{
+                    font-size: 18px;
+                    margin-top: 10px;
+                    color: rgb(29, 28, 28);
+                    font-weight: 600;
+                    text-align: center;
+                    border: 1px solid rgb(204, 204, 204);
+                    padding: 5px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .featured__products{
+        margin-top: 70px;
+        .wrapper{
+            display: flex;
+            align-items: center;
+            overflow-y: scroll;
+            width: 95%;
+            margin: 10px auto;
+            .product{
+                margin-left: 20px;
+                width: 100%;
+                img{
+                    max-width: 160px;
+                    height: 160px;
+                }
+                h3{
+                    font-size: 16px;
+                    margin-top: 10px;
+                    color: rgb(29, 28, 28);
+                    font-weight: 400;
+                    text-align: center;
+                    border: 1px solid rgb(204, 204, 204);
+                    padding: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .delivery__info{
+        margin: 70px 0 30px;
+        box-shadow: 0px 1px 7px grey;
+        padding: 10px;
+        .body{
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            box-shadow: 0px 0px 3px rgba(139, 139, 139, 0.6);
+            padding: 10px;
+            h3{
+                font-weight: 400;
+                padding-left: 10px;
+                color: #000000;
+            }
+            .icon{
+                color: rgb(8, 3, 3);
+            }
+        }
+    }
+}

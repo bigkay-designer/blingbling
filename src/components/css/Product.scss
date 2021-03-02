@@ -1,0 +1,104 @@
+.product__pages{
+    margin-top: 52px;
+    .watches__banner{
+        width: 100%;
+        img{
+            max-width: 100%;
+            height:auto;
+        }
+    }
+    .search{
+        form{
+            width: 100%;
+            margin: 0 auto;
+            .input__field{
+                display: flex;
+                align-items: center;
+                border: 1px solid rgba(34, 34, 34, 0.5);
+                padding: 5px 10px;
+                input{
+                    font-size: 16px;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+            .search__btn{
+                margin-top: 10px;
+                button{
+                    width: 100%;
+                    background-color:#07AE72 ;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .current__link{
+        margin-top: 20px;
+        padding-left: 10px;
+        span{
+            text-transform: capitalize;
+        }
+    }
+
+    .product__filter{
+        margin: 20px 0 30px;
+        display: flex;
+        button{
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid rgba(168, 168, 168, 0.6);
+            box-shadow: 0px 1px 1px grey;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .products__container{
+        .products{
+            width: 95%;
+            margin: 20px auto;
+            box-shadow: 0px 2px 7px grey;
+            padding: 10px 10px 20px;
+            border-radius: 7px;
+            .icon__div{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .icon{
+                    max-width: fit-content;
+                    color: rgba(51, 51, 51, 0.7);
+                    cursor: pointer;
+                }
+            }
+            .img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 160px;
+                    height: 160px;
+                }
+            }
+
+            .product__body{
+                padding-left: 20px;
+                margin: 20px 0 0 ;
+                cursor: pointer;
+                span{
+                    color: rgb(65, 65, 65);
+                }
+                h3{
+                    font-weight: 600;
+                    margin: 10px 0;
+                }
+                p{
+                    color: rgb(97, 97, 97);
+                }
+            }
+        }
+    }
+}

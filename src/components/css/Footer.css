@@ -1,0 +1,124 @@
+.footer {
+  background-color: #203232;
+}
+
+.footer .newsletter {
+  padding: 10px 0 30px;
+  background-color: #2D3B3B;
+}
+
+.footer .newsletter .title {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.footer .newsletter .title h2 {
+  color: #fff;
+}
+
+.footer .newsletter .title p {
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 0 10px;
+  color: #cecece;
+}
+
+.footer .newsletter .input form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer .newsletter .input form input {
+  font-size: 16px;
+  width: 100%;
+  padding: 7px 10px;
+}
+
+.footer .newsletter .input form .btn {
+  margin-top: 15px;
+}
+
+.footer .newsletter .input form .btn button {
+  background-color: #07AE72;
+  width: 100%;
+  color: #fff;
+}
+
+.footer .footer__section .title {
+  text-align: center;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.footer .footer__section .title h2 {
+  font-weight: 500;
+}
+
+.footer .footer__section .socials {
+  margin-bottom: 30px;
+}
+
+.footer .footer__section .socials .icons__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer__section .socials .icon {
+  font-size: 26px;
+}
+
+.footer .footer__section .socials .twitter {
+  color: #0e76a8;
+}
+
+.footer .footer__section .socials .insta {
+  color: #bc2a8d;
+}
+
+.footer .footer__section .socials .facebook {
+  color: #3b5998;
+}
+
+.footer .footer__section .title {
+  text-transform: capitalize;
+}
+
+.footer .footer__section .title h2 {
+  font-weight: 400;
+}
+
+.footer .footer__section .company__info {
+  margin-bottom: 20px;
+}
+
+.footer .footer__section ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer__section ul li {
+  text-align: center;
+  list-style: none;
+  margin: 10px 0;
+  color: #cecece;
+  text-transform: capitalize;
+}
+
+.footer .footer__section .copyright {
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #c4c3c3;
+  padding: 5px 0;
+}
+
+.footer .footer__section .copyright p {
+  font-size: 12px;
+  color: #cecece;
+}
+/*# sourceMappingURL=Footer.css.map */
