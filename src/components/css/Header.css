@@ -50,10 +50,11 @@
   position: absolute;
   top: -5px;
   left: -15px;
-  background: blueviolet;
+  background: #1071df;
   color: #fff;
-  padding: 3px 7px;
+  padding: 2px 7px;
   border-radius: 50%;
+  font-size: 14px;
 }
 
 .header .header__wrapper .header__small__nav .icon {

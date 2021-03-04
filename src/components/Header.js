@@ -18,6 +18,11 @@ function Header() {
         window.scrollTo(0, 0);
       }, [pathname]);
     
+      const toTopPage = () => window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      }) 
     
     return (
         <div className="header">
@@ -25,7 +30,7 @@ function Header() {
                 <div onClick={()=> setOpenNav(true)} className="header__small__nav">
                     <Menu className="icon" />
                 </div>
-                <div className="header__logo">
+                <div onClick={toTopPage} className="header__logo">
                     <h2> <Link to='/'>BLINGBLING</Link> </h2>
                 </div>
                 <div className="header__cart">
