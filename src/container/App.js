@@ -7,8 +7,17 @@ import Watches from '../components/pages/Watches'
 import Chains from '../components/pages/Chains'
 import ProductInfo from '../components/pages/ProductInfo'
 import Checkout from '../components/pages/Checkout'
+import Payment from '../components/pages/Payment'
 import Footer from '../components/Footer'
+// Stripe
+import {loadStripe} from '@stripe/stripe-js'
+import {Elements} from '@stripe/react-stripe-js'
+
+//css
 import './App.css';
+
+
+const promise = loadStripe('pk_test_51ITBiPDkKKCnsU3mzowRSuptSxuYu1YiPtFZfC0octwgDMKJj9uYHHxlwJFlCPSUBIATHHQjtc3MmuJGOkDQTEtp00X30SP1ZT')
 
 function App() {
   return (
@@ -16,6 +25,12 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          {/* payment and checkout */}
+          <Route path="/payment">
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+          </Route>
           <Route path="/checkout">
             <Checkout />
           </Route>

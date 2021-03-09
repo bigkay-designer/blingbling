@@ -1,0 +1,130 @@
+.payment{
+    margin-top: 52px;
+    .checkout__amount{
+        text-align: center;
+        color: grey;
+        span{
+            color: #000;
+            font-weight: 500;
+        }
+    }
+    .payment__container{
+        margin-top: 20px;
+        background-color: #fff;
+        h3{
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .payment__section{
+            display: flex;
+            padding: 15px;
+            margin: 10px 0;
+            border-bottom: 1px solid lightgrey;
+            h3{
+                flex: 0.2;
+            }
+            .payment__body{
+                flex: 0.8;
+                margin-left: 20px;
+                form{
+                    width: 100%;
+                    input{
+                        width: 50%;
+                        margin: 10px;
+                        margin: 0 auto;
+                        border: none;
+                        padding: 10px;
+                    }
+                    .date{
+                        display: flex;
+                        input{
+                            margin: 10px 0;
+                        }
+                    }
+                    .pay__btn{
+                        margin: 20px 0;
+                        box-shadow: 0px 2px 4px grey;
+                        padding: 20px;
+                        border-radius: 12px;
+                        .total{
+                            h3{
+                                font-size: 16px;
+                                color: rgb(73, 73, 73);
+                                span{
+                                    color: #000;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        button{
+                            width: 100%;
+                            background-color: #3b9af3;
+                            color: #fff;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper{
+            width: 100%;
+            margin: 0px auto 0;
+            position: relative;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            height: 350px;
+            padding: 0 20px ;
+            .product{
+                border: 1px solid rgba(48, 47, 47, 0.3);
+                box-shadow: 0px 2px 4px grey;
+                padding: 10px 0;
+                border-radius: 12px;
+                margin: 0px 0 20px;
+                .product__flex{
+                    display: grid;
+                    grid-template-columns: 30% 50% 20%;
+                    .img{
+                        img{
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .product__body{
+                        padding: 0 10px;
+                        margin-left: 10px;
+                        h3{
+                            font-weight: 600;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                        p{
+                            margin: 10px 0;
+                            color: rgb(66, 66, 66);
+                        }
+                        .price{
+                            font-weight: 700;
+                            color: #000;
+                        }
+                    }
+                    .icon__div{
+                        padding-right: 10px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: right;
+                        svg{
+                            cursor: pointer;
+                            color: rgb(59, 59, 59);
+                        }
+                    }
+                }
+                .product__size{
+                    margin-top: 10px;
+                    padding: 10px;
+                }
+            }
+        }
+
+    }
+}

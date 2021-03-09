@@ -62,10 +62,16 @@
   position: relative;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  height: 350px;
+  height: 450px;
   -webkit-box-shadow: 0px 1px 4px grey;
           box-shadow: 0px 1px 4px grey;
   padding: 0 10px;
+}
+
+@media screen and (max-width: 360px) {
+  .checkout .wrapper {
+    height: 350px;
+  }
 }
 
 .checkout .wrapper .product {
@@ -91,6 +97,7 @@
 
 .checkout .wrapper .product .product__flex .product__body {
   padding: 0 10px;
+  margin-left: 10px;
 }
 
 .checkout .wrapper .product .product__flex .product__body h3 {
@@ -120,10 +127,10 @@
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
-  cursor: pointer;
 }
 
 .checkout .wrapper .product .product__flex .icon__div svg {
+  cursor: pointer;
   color: #3b3b3b;
 }
 

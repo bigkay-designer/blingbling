@@ -18,11 +18,7 @@ function Checkout() {
     const [{basket}, dispatch] = useStateValue()
     let totalValue = getBasketTotal(basket).toFixed(2)
 
-    
-
-    const removeFromBasket = () =>{
-        let id;
-        basket.map(data=> id = data.id)
+    const removeFromBasket = (id) =>{
         dispatch({
             type: "REMOVE_FROM_BASKET",
             id:id,
@@ -77,7 +73,7 @@ function Checkout() {
                                 <p>Quantity: {data.quantity}</p>
                                 <p className="price">£{data.price}</p>
                             </div>
-                            <div onClick={removeFromBasket} className="icon__div">
+                            <div onClick={()=> removeFromBasket (data.id)} className="icon__div">
                                 <Delete />
                             </div>
                         </div>
@@ -96,7 +92,7 @@ function Checkout() {
             <div className="total">
                 <h3>Total: £{totalValue}</h3>
             </div>
-            <div className="paynow">
+            <div onClick={e => hitoryPathUrl.push('/payment')} className="paynow">
                 <Button>Pay Now</Button>
             </div>
         </div>

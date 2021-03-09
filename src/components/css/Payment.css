@@ -1,0 +1,169 @@
+.payment {
+  margin-top: 52px;
+}
+
+.payment .checkout__amount {
+  text-align: center;
+  color: grey;
+}
+
+.payment .checkout__amount span {
+  color: #000;
+  font-weight: 500;
+}
+
+.payment .payment__container {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.payment .payment__container h3 {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.payment .payment__container .payment__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  margin: 10px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.payment .payment__container .payment__section h3 {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+.payment .payment__container .payment__section .payment__body {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  margin-left: 20px;
+}
+
+.payment .payment__container .payment__section .payment__body form {
+  width: 100%;
+}
+
+.payment .payment__container .payment__section .payment__body form input {
+  width: 50%;
+  margin: 10px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px;
+}
+
+.payment .payment__container .payment__section .payment__body form .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment .payment__container .payment__section .payment__body form .date input {
+  margin: 10px 0;
+}
+
+.payment .payment__container .payment__section .payment__body form .pay__btn {
+  margin: 20px 0;
+  -webkit-box-shadow: 0px 2px 4px grey;
+          box-shadow: 0px 2px 4px grey;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.payment .payment__container .payment__section .payment__body form .pay__btn .total h3 {
+  font-size: 16px;
+  color: #494949;
+}
+
+.payment .payment__container .payment__section .payment__body form .pay__btn .total h3 span {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.payment .payment__container .payment__section .payment__body form .pay__btn button {
+  width: 100%;
+  background-color: #3b9af3;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.payment .payment__container .wrapper {
+  width: 100%;
+  margin: 0px auto 0;
+  position: relative;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  height: 350px;
+  padding: 0 20px;
+}
+
+.payment .payment__container .wrapper .product {
+  border: 1px solid rgba(48, 47, 47, 0.3);
+  -webkit-box-shadow: 0px 2px 4px grey;
+          box-shadow: 0px 2px 4px grey;
+  padding: 10px 0;
+  border-radius: 12px;
+  margin: 0px 0 20px;
+}
+
+.payment .payment__container .wrapper .product .product__flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 50% 20%;
+      grid-template-columns: 30% 50% 20%;
+}
+
+.payment .payment__container .wrapper .product .product__flex .img img {
+  width: 100px;
+  height: 100px;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body {
+  padding: 0 10px;
+  margin-left: 10px;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body h3 {
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body p {
+  margin: 10px 0;
+  color: #424242;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body .price {
+  font-weight: 700;
+  color: #000;
+}
+
+.payment .payment__container .wrapper .product .product__flex .icon__div {
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.payment .payment__container .wrapper .product .product__flex .icon__div svg {
+  cursor: pointer;
+  color: #3b3b3b;
+}
+
+.payment .payment__container .wrapper .product .product__size {
+  margin-top: 10px;
+  padding: 10px;
+}
+/*# sourceMappingURL=Payment.css.map */
