@@ -8,6 +8,7 @@ import Chains from '../components/pages/Chains'
 import ProductInfo from '../components/pages/ProductInfo'
 import Checkout from '../components/pages/Checkout'
 import Payment from '../components/pages/Payment'
+import Orders from '../components/pages/Orders'
 import Footer from '../components/Footer'
 // Stripe
 import {loadStripe} from '@stripe/stripe-js'
@@ -26,30 +27,36 @@ function App() {
         <Header />
         <Switch>
           {/* payment and checkout */}
+          <Route path="/orders">
+            <Orders />
+          </Route>
           <Route path="/payment">
             <Elements stripe={promise}>
               <Payment />
             </Elements>
           </Route>
-          <Route path="/checkout">
-            <Checkout />
-          </Route>
-          {/* Product info */}
-          <Route path="/product">
-            <ProductInfo />
-          </Route>
-          {/* Products */}
-          <Route path="/chains">
-            <Chains />
-          </Route>
-          <Route path="/watches">
-            <Watches />
-          </Route>
-          <Route path="/" exact>
-            <Landing />
-          </Route>
+          <div className="main__div">
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
+            {/* Product info */}
+            <Route path="/product">
+              <ProductInfo />
+            </Route>
+            {/* Products */}
+            <Route path="/chains">
+              <Chains />
+            </Route>
+            <Route path="/watches">
+              <Watches />
+            </Route>
+            <Route path="/" exact>
+              <Landing />
+            </Route>
+            <Footer />
+
+          </div>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

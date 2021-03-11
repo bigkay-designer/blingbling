@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useStateValue} from '../StateProvider'
+import CurrencyFormat from 'react-currency-format'
 import { getBasketTotal } from "../reducer";
 import {Link, useHistory, useLocation} from 'react-router-dom'
 import {Close, Delete} from '@material-ui/icons'
@@ -7,7 +8,8 @@ import {Button} from '@material-ui/core'
 import '../css/Checkout.css'
 function Checkout() {
     const [newBasket, setNewBasket] = useState([])
-    // let quantity = 0;
+    const [selectValue, setSelectValue] = useState('')
+
     const {pathname} = useLocation()
     let hitoryPathUrl = useHistory()
     const topPage = ()=>{
@@ -16,7 +18,13 @@ function Checkout() {
     }
 
     const [{basket}, dispatch] = useStateValue()
-    let totalValue = getBasketTotal(basket).toFixed(2)
+
+    const handleSelectChange = (e)=>{
+        setSelectValue(e.target.value)
+        console.log(e.target.value)
+    }
+    
+    
 
     const removeFromBasket = (id) =>{
         dispatch({
@@ -27,6 +35,7 @@ function Checkout() {
 
     
     useEffect(()=>{
+        
         let result = []
         const mapEl = new Map()
         for (const item of basket){
@@ -38,13 +47,17 @@ function Checkout() {
                     price:item.price,
                     img: item.img,
                     body:item.body,
-                    quantity: item.quantity
+                    quantity: item.quantity,
+                    size: selectValue
                 })
             }
         }
         setNewBasket(result)
     }, [basket])
 
+    const handlePayment = () => {
+        hitoryPathUrl.push('/payment')
+    }
 
     return (
         <div className="checkout">
@@ -78,21 +91,33 @@ function Checkout() {
                             </div>
                         </div>
                         <div className="product__size">
-                            <select name="size">
+                            <select onChange={handleSelectChange} value={selectValue} name="size" required>
                                 <option >Choose Size</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>
                                 <option value="30">30</option>
                             </select>
                         </div>
+                        {data.size}
                     </div>
                     
                 ))}
             </div>
             <div className="total">
-                <h3>Total: £{totalValue}</h3>
+            <CurrencyFormat 
+                renderText={(value)=>(
+                    <>
+                        <h3>Total: <span>{value}</span> </h3>
+                    </>      
+                )}
+                decimalScale={2}
+                value={getBasketTotal(basket)}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix={"$"}
+            />
             </div>
-            <div onClick={e => hitoryPathUrl.push('/payment')} className="paynow">
+            <div onClick={handlePayment} className="paynow">
                 <Button>Pay Now</Button>
             </div>
         </div>

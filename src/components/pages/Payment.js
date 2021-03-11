@@ -1,20 +1,44 @@
 import React, {useState, useEffect} from 'react'
+import axios from '../axios'
+import CurrencyFormat from 'react-currency-format'
 import {useStateValue} from '../StateProvider'
+import {Link, useHistory, useLocation} from 'react-router-dom'
 import {Close, Delete} from '@material-ui/icons'
 import { getBasketTotal } from "../reducer";
-
+import {db} from '../firebase'
 import '../css/Payment.css'
 import { Button } from '@material-ui/core'
-import {CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import {CardElement, Elements, useElements, useStripe } from '@stripe/react-stripe-js';
 function Payment() {
-
+    let hitoryPathUrl = useHistory()
     const [newBasket, setNewBasket] = useState([])
     const [{basket}, dispatch] = useStateValue()
     let totalValue = getBasketTotal(basket).toFixed(2)
 
     const stripe = useStripe()
-    const elemets = useElements()
+    const  [succeeded, setSucceeded] = useState(false)
+    const [processing, setProcessing] = useState("")
+    const elements = useElements()
 
+    const [error, setError] = useState(null)
+    const [disabled, setDisabled] = useState(true)
+    const [clientSecret, setClientSecret] = useState(true)
+
+    useEffect(() => {
+        // generate the special stripe secret which allows us to charge a customer
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                // Stripe expects the total in a currencies subunits
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+        }
+
+        getClientSecret();
+    }, [basket])
+
+    // console.log('the secret is', clientSecret)
 
     useEffect(()=>{
         let result = []
@@ -28,7 +52,8 @@ function Payment() {
                     price:item.price,
                     img: item.img,
                     body:item.body,
-                    quantity: item.quantity
+                    quantity: item.quantity,
+                    size:item.size
                 })
             }
         }
@@ -42,8 +67,44 @@ function Payment() {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setProcessing(true)
 
+        const payload = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
+            }
+        }).then(({paymentIntent})=>{
+            // paymentIntent = payment confirmation
+
+            db.collection('orders')
+            .doc(paymentIntent.id)
+            .set({
+                basket:basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+
+            setSucceeded(true)
+            setError(null)
+            setProcessing(false)
+
+            dispatch({
+                type:"EMPTY_BASKET"
+            })
+            
+            hitoryPathUrl.replace('/orders')
+        })
+
+
+    }
+
+    const handleChange = (event) => {
+        // listen fot changes in CardElements
+        // display any errors as the customer types their card details.
+        setDisabled(event.empty)
+        setError(event.error ? event.error.message : "");
     }
 
 
@@ -83,10 +144,10 @@ function Payment() {
                                 </div>
                                 <div className="product__size">
                                     <select name="size">
-                                        <option >Choose Size</option>
-                                        <option value="10">10</option>
+                                        <option >{'payload'}</option>
+                                        {/* <option value="10">10</option>
                                         <option value="20">20</option>
-                                        <option value="30">30</option>
+                                        <option value="30">30</option> */}
                                     </select>
                                 </div>
                             </div>
@@ -98,18 +159,33 @@ function Payment() {
                     <h3>payment Method</h3>
                     <div className="payment__body">
                         <form onSubmit={handleSubmit}>
-                            <CardElement />
+                            <CardElement onChange={handleChange} />
                             {/* <input type="number" required placeholder="Card number" />
                             <div className="date">
                                 <input type="number" required placeholder="MM/YY" />
                                 <input type="number" required placeholder="CVC" />
                             </div> */}
                             <div className="pay__btn">
-                                <div className="total">
+                                {/* <div className="total">
                                     <h3>Order Total: <span>{totalValue}</span> </h3>
-                                </div>
-                                <Button>But now</Button>
+                                </div> */}
+                                <CurrencyFormat 
+                                    renderText={(value)=>(
+                                        <>
+                                            <h3>Order Total: <span>{value}</span> </h3>
+                                        </>      
+                                    )}
+                                    decimalScale={2}
+                                    value={getBasketTotal(basket)}
+                                    displayType={"text"}
+                                    thousandSeparator={true}
+                                    prefix={"$"}
+                                />
+                                <button disabled={processing || disabled || succeeded}>
+                                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                                </button>
                             </div>
+                            {error && <div>{error}</div>}
                         </form>
                     </div>
                 </div>

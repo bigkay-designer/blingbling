@@ -1,0 +1,106 @@
+.orders {
+  margin-top: 70px;
+}
+
+.orders .title h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.orders .wrapper {
+  width: 95%;
+  margin: 20px auto 0;
+  position: relative;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  height: 80vh;
+  -webkit-box-shadow: 0px 1px 4px grey;
+          box-shadow: 0px 1px 4px grey;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 360px) {
+  .orders .wrapper {
+    height: 350px;
+  }
+}
+
+.orders .wrapper .product {
+  border: 1px solid rgba(48, 47, 47, 0.3);
+  -webkit-box-shadow: 0px 2px 4px grey;
+          box-shadow: 0px 2px 4px grey;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.orders .wrapper .product .date {
+  margin: 10px 0 20px;
+}
+
+.orders .wrapper .product .total {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.orders .wrapper .product .total span {
+  font-size: 18px;
+}
+
+.orders .wrapper .product .product__flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 50% 20%;
+      grid-template-columns: 30% 50% 20%;
+  margin-top: 20px;
+}
+
+.orders .wrapper .product .product__flex .img img {
+  width: 100px;
+  height: 100px;
+}
+
+.orders .wrapper .product .product__flex .product__body {
+  padding: 0 10px;
+  margin-left: 10px;
+}
+
+.orders .wrapper .product .product__flex .product__body h3 {
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.orders .wrapper .product .product__flex .product__body p {
+  margin: 10px 0;
+  color: #424242;
+}
+
+.orders .wrapper .product .product__flex .product__body .price {
+  font-weight: 700;
+  color: #000;
+}
+
+.orders .wrapper .product .product__flex .icon__div {
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.orders .wrapper .product .product__flex .icon__div svg {
+  cursor: pointer;
+  color: #3b3b3b;
+}
+
+.orders .wrapper .product .product__size {
+  margin-top: 10px;
+  padding: 10px;
+}
+/*# sourceMappingURL=Orders.css.map */

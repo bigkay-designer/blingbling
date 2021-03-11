@@ -1,0 +1,81 @@
+.orders{
+    margin-top: 70px;
+    .title{
+        h3{
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+    .wrapper{
+        width: 95%;
+        margin: 20px auto 0;
+        position: relative;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        height: 80vh;
+        @media screen and (max-width:360px) {
+            height: 350px;
+        }
+        box-shadow: 0px 1px 4px grey;
+        padding: 0 10px ;
+        .product{
+            border: 1px solid rgba(48, 47, 47, 0.3);
+            box-shadow: 0px 2px 4px grey;
+            padding: 10px;
+            border-radius: 12px;
+            margin: 20px 0;
+            .date{
+                margin: 10px 0 20px;
+            }
+            .total{
+                margin: 10px 0;
+                font-size: 14px;
+                span{
+                    font-size: 18px;
+                }
+            }
+            .product__flex{
+                display: grid;
+                grid-template-columns: 30% 50% 20%;
+                margin-top: 20px;
+                .img{
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .product__body{
+                    padding: 0 10px;
+                    margin-left: 10px;
+                    h3{
+                        font-weight: 600;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                    p{
+                        margin: 10px 0;
+                        color: rgb(66, 66, 66);
+                    }
+                    .price{
+                        font-weight: 700;
+                        color: #000;
+                    }
+                }
+                .icon__div{
+                    padding-right: 10px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: right;
+                    svg{
+                        cursor: pointer;
+                        color: rgb(59, 59, 59);
+                    }
+                }
+            }
+            .product__size{
+                margin-top: 10px;
+                padding: 10px;
+            }
+        }
+    }
+}

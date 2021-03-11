@@ -5,11 +5,11 @@ import {Button} from '@material-ui/core'
 import './css/Product.css'
 function Product({id, img, title, price,body}) {
 
-    const [{basket}, dispach] = useStateValue()
+    const [{basket}, dispatch] = useStateValue()
     // console.log('this is the ', basket)
     const addToBasket = ()=>{
         // dispatch the item in to the data layer
-        dispach({
+        dispatch({
             type: 'ADD_TO_BASKET',
             item:{
                 id: id,
@@ -17,7 +17,8 @@ function Product({id, img, title, price,body}) {
                 img:img,
                 body: body, 
                 price: price,
-                quantity: 1
+                quantity: 1,
+                size: ''
             }
         })
     }
