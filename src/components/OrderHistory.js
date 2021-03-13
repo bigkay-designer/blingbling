@@ -5,23 +5,8 @@ function OrderHistory({id,order, date, amount}) {
     const [filteredOrder, setFilteredOrder] = useState()
     
     useEffect(() => {
-        let result = []
-        const elMap = new Map
-        for(const item of order){
-            if(!elMap.has(item.title)){
-                elMap.set(item.title, true)
-                result.push({
-                    id:item.id,
-                    title:item.title,
-                    price:item.price,
-                    img: item.img,
-                    body:item.body,
-                    quantity: item.quantity
-                })
-            }
-
-        }
-        setFilteredOrder(result)
+        let filteredBasket = order.filter((el,i,a)=> a.findIndex(item => el.size === item.size && el.title === item.title)=== i)
+        setFilteredOrder(filteredBasket)
     
     }, [])
 
@@ -38,6 +23,7 @@ function OrderHistory({id,order, date, amount}) {
                             <h3>{order.title}</h3>
                             <p>item code: {order.id}</p>
                             <p>Quantity: {order.quantity}</p>
+                            <p>Size: {order.size}</p>
                             <p className="price">£{order.price}</p>
                         </div>
                     </div>

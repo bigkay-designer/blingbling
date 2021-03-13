@@ -8,8 +8,6 @@ import {Button} from '@material-ui/core'
 import '../css/Checkout.css'
 function Checkout() {
     const [newBasket, setNewBasket] = useState([])
-    const [selectValue, setSelectValue] = useState('')
-
     const {pathname} = useLocation()
     let hitoryPathUrl = useHistory()
     const topPage = ()=>{
@@ -18,41 +16,19 @@ function Checkout() {
     }
 
     const [{basket}, dispatch] = useStateValue()
-
-    const handleSelectChange = (e)=>{
-        setSelectValue(e.target.value)
-        console.log(e.target.value)
-    }
-    
-    
-
     const removeFromBasket = (id) =>{
         dispatch({
             type: "REMOVE_FROM_BASKET",
             id:id,
         })
     }
-
+    
     
     useEffect(()=>{
         
-        let result = []
-        const mapEl = new Map()
-        for (const item of basket){
-            if(!mapEl.has(item.title)){
-                mapEl.set(item.title, true);
-                result.push({
-                    id:item.id,
-                    title:item.title,
-                    price:item.price,
-                    img: item.img,
-                    body:item.body,
-                    quantity: item.quantity,
-                    size: selectValue
-                })
-            }
-        }
-        setNewBasket(result)
+        let filteredBasket = basket.filter((el,i,a)=> a.findIndex(item => el.size === item.size && el.title === item.title)=== i)
+        setNewBasket(filteredBasket)        
+
     }, [basket])
 
     const handlePayment = () => {
@@ -84,21 +60,13 @@ function Checkout() {
                                 <h3>{data.title}</h3>
                                 <p>item code: {data.id}</p>
                                 <p>Quantity: {data.quantity}</p>
+                                <p>Size: {data.size}</p>
                                 <p className="price">£{data.price}</p>
                             </div>
                             <div onClick={()=> removeFromBasket (data.id)} className="icon__div">
                                 <Delete />
                             </div>
                         </div>
-                        <div className="product__size">
-                            <select onChange={handleSelectChange} value={selectValue} name="size" required>
-                                <option >Choose Size</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                                <option value="30">30</option>
-                            </select>
-                        </div>
-                        {data.size}
                     </div>
                     
                 ))}
@@ -114,7 +82,7 @@ function Checkout() {
                 value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={"$"}
+                prefix={"£"}
             />
             </div>
             <div onClick={handlePayment} className="paynow">

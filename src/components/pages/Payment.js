@@ -41,23 +41,8 @@ function Payment() {
     // console.log('the secret is', clientSecret)
 
     useEffect(()=>{
-        let result = []
-        const mapEl = new Map()
-        for (const item of basket){
-            if(!mapEl.has(item.title)){
-                mapEl.set(item.title, true);
-                result.push({
-                    id:item.id,
-                    title:item.title,
-                    price:item.price,
-                    img: item.img,
-                    body:item.body,
-                    quantity: item.quantity,
-                    size:item.size
-                })
-            }
-        }
-        setNewBasket(result)
+       let filteredBasket = basket.filter((el,i,a)=> a.findIndex(item => el.size === item.size && el.title === item.title)=== i)
+        setNewBasket(filteredBasket)
     }, [basket])
 
     const removeFromBasket = (id) =>{
@@ -136,19 +121,12 @@ function Payment() {
                                         <h3>{data.title}</h3>
                                         <p>item code: {data.id}</p>
                                         <p>Quantity: {data.quantity}</p>
+                                        <p>Size: {data.size}</p>
                                         <p className="price">£{data.price}</p>
                                     </div>
                                     <div onClick={()=> removeFromBasket(data.id)} className="icon__div">
                                         <Delete />
                                     </div>
-                                </div>
-                                <div className="product__size">
-                                    <select name="size">
-                                        <option >{'payload'}</option>
-                                        {/* <option value="10">10</option>
-                                        <option value="20">20</option>
-                                        <option value="30">30</option> */}
-                                    </select>
                                 </div>
                             </div>
                             
@@ -160,15 +138,7 @@ function Payment() {
                     <div className="payment__body">
                         <form onSubmit={handleSubmit}>
                             <CardElement onChange={handleChange} />
-                            {/* <input type="number" required placeholder="Card number" />
-                            <div className="date">
-                                <input type="number" required placeholder="MM/YY" />
-                                <input type="number" required placeholder="CVC" />
-                            </div> */}
                             <div className="pay__btn">
-                                {/* <div className="total">
-                                    <h3>Order Total: <span>{totalValue}</span> </h3>
-                                </div> */}
                                 <CurrencyFormat 
                                     renderText={(value)=>(
                                         <>
@@ -179,7 +149,7 @@ function Payment() {
                                     value={getBasketTotal(basket)}
                                     displayType={"text"}
                                     thousandSeparator={true}
-                                    prefix={"$"}
+                                    prefix={"£"}
                                 />
                                 <button disabled={processing || disabled || succeeded}>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
