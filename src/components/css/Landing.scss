@@ -1,5 +1,4 @@
 .landing{
-    margin-top: 50px;
     .title{
         h3{
             text-align: center;
@@ -39,9 +38,15 @@
                 letter-spacing: 0.5px;
             }
         }
-        img{
-            width: 100%;
-            height: auto;
+        .img{
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: auto;
+                height: auto;
+                object-fit: cover;
+            }
         }
     }
     .welcome__msg{
@@ -138,6 +143,18 @@
             }
             .icon{
                 color: rgb(65, 65, 65);
+            }
+        }
+    }
+}
+
+//Media Queries
+@media screen and (min-width:860px){
+    .landing{
+        .delivery__info{
+            .body{
+                max-width: 85%;
+                margin: 20px auto;
             }
         }
     }

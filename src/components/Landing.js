@@ -10,7 +10,10 @@ function Landing() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo eligendi dolor. Nobis reiciendis ducimus ad dolorem porro quisquam laboriosam?</p>
 
                 </div>
-                <img src="https://www.pngkey.com/png/full/19-191849_watch-rolex-cosmograph-daytona-automatic-mens-watch-18k.png" alt="image"/>
+                <div className="img">
+                    <img src="https://www.pngkey.com/png/full/19-191849_watch-rolex-cosmograph-daytona-automatic-mens-watch-18k.png" alt="image"/>
+
+                </div>
             </section>
 
             <section className="welcome__msg">

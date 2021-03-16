@@ -1,37 +1,10 @@
 .product__pages{
-    margin-top: 52px;
-    .watches__banner{
+    .product__banner{
         width: 100%;
         img{
-            max-width: 100%;
-            height:auto;
-        }
-    }
-    .search{
-        form{
             width: 100%;
-            margin: 0 auto;
-            .input__field{
-                display: flex;
-                align-items: center;
-                border: 1px solid rgba(34, 34, 34, 0.5);
-                padding: 5px 10px;
-                input{
-                    font-size: 16px;
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                    margin: auto;
-                }
-            }
-            .search__btn{
-                margin-top: 10px;
-                button{
-                    width: 100%;
-                    background-color:#07AE72 ;
-                    color: #fff;
-                }
-            }
+            object-fit: cover;
+            height:auto;
         }
     }
 
@@ -56,8 +29,8 @@
             cursor: pointer;
         }
     }
-
     .products__container{
+        width: 100%;
         .products{
             width: 95%;
             margin: 0px auto;
@@ -101,13 +74,17 @@
                 }
             }
             .product__size{
-                width: 100%;
-                margin-top: 20px;
+                width: 95%;
+                margin: 20px auto 0;
                 select{
                     width: 100%;
                     height: 40px;
                     font-size: 16px;
                     padding: 0 10px;
+                }
+                .bg_color{
+                    outline:1px solid rgb(252, 34, 34);
+                    border: none;
                 }
             }
             .add__to__basket{
@@ -119,6 +96,49 @@
                     color: rgb(255, 255, 255);
                 }
             }
+        }
+    }
+}
+
+// Media Queries
+@media screen and (min-width:560px){
+    .product__pages{
+        .product__banner{
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 140px;
+            }
+        }
+        .products__container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 20px 0;
+        }
+}
+}
+@media screen and (min-width:860px){
+    .product__pages{
+        .product__banner{
+            img{
+                height: 180px;
+            }
+        }
+        .products__container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+@media screen and (min-width:1260px){
+    .product__pages{
+        .product__banner{
+            img{
+                height: 240px;
+            }
+        }
+        .products__container{
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

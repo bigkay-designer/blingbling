@@ -1,7 +1,3 @@
-.landing {
-  margin-top: 50px;
-}
-
 .landing .title h3 {
   text-align: center;
   text-transform: capitalize;
@@ -45,9 +41,23 @@
   letter-spacing: 0.5px;
 }
 
-.landing .showCase img {
-  width: 100%;
+.landing .showCase .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing .showCase .img img {
+  width: auto;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .landing .welcome__msg {
@@ -179,5 +189,12 @@
 
 .landing .delivery__info .body .icon {
   color: #414141;
+}
+
+@media screen and (min-width: 860px) {
+  .landing .delivery__info .body {
+    max-width: 85%;
+    margin: 20px auto;
+  }
 }
 /*# sourceMappingURL=Landing.css.map */

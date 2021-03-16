@@ -4,15 +4,7 @@ import Product from '../Product'
 function Watches() {
     return (
         <div className="product__pages watches">
-            <section className={`search`}>
-                <form >
-                    <div className="input__field">
-                        <Search className="icon" />
-                        <input type="text" placeholder="Search for keyword, brand or product" />
-                    </div>
-                </form>
-            </section>
-            <section className="watches__banner">
+            <section className="product__banner">
                 <img src="https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt=""/>
             </section>
             <div className="current__link">
@@ -22,13 +14,15 @@ function Watches() {
                 <button>Sort</button>
                 <button>Filter</button>
             </section>
-            <Product  
-                id='929332929'
-                img="https://i.pinimg.com/originals/fb/8b/42/fb8b42615e4d653c3b094544c32a8fbf.png"
-                price={99.99}
-                title="Gucci"
-                body="dolor sit amet consectetur adipisicing elit. Odio, incidunt."
-            />
+            <section className="products__container">
+                <Product  
+                    id='929332929'
+                    img="https://i.pinimg.com/originals/fb/8b/42/fb8b42615e4d653c3b094544c32a8fbf.png"
+                    price={99.99}
+                    title="Gucci"
+                    body="dolor sit amet consectetur adipisicing elit. Odio, incidunt."
+                />
+            </section>
         </div>
     )
 }

@@ -3,38 +3,41 @@
     .newsletter{
         padding: 10px 0 30px;
         background-color: #2D3B3B;
-        .title{
-            margin: 10px 0 20px;
-            text-align: center;
-            h2{
-                color: #fff;
-            }
-            p{
-                margin-top: 10px;
-                word-wrap: break-word;
-                word-break: break-all;
-                padding: 0 10px;
-                color: rgb(206, 206, 206);
-            }
-        }
-        .input{
-            form{
-                width: 90%;
-                margin: 0 auto;
-                input{
-                    font-size: 16px;
-                    width: 100%;
-                    padding: 7px 10px;
+        .newsletter__container{
+            width: 90%;
+            margin: 0 auto;
+            .title{
+                margin: 10px 0 20px;
+                text-align: left;
+                h2{
+                    color: #fff;
                 }
-                .btn{
-                    margin-top:15px;
-                    button{
-                        background-color:#07AE72 ;
+                p{
+                    margin-top: 10px;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    color: rgb(206, 206, 206);
+                    max-width: 300px;
+                }
+            }
+            .input{
+                form{
+                    input{
+                        font-size: 16px;
                         width: 100%;
-                        color: #fff;
+                        padding: 7px 10px;
+                    }
+                    .btn{
+                        margin-top:15px;
+                        button{
+                            background-color:#07AE72 ;
+                            width: 100%;
+                            color: #fff;
+                        }
                     }
                 }
             }
+
         }
     }
 
@@ -96,6 +99,44 @@
             p{
                 font-size: 12px;
                 color: #cecece;
+            }
+        }
+    }
+}
+// Media Query
+@media screen and (min-width:560px){
+    .footer{
+        .newsletter{
+            .newsletter__container{
+                width: 65%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:860px){
+    .footer{
+        .newsletter{
+            .newsletter__container{
+                width: 85%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .input{
+                    width: 50%;
+                }
+            }
+        }
+        .footer__section{
+            .socials{
+                max-width: 65%;
+                margin: 0 auto 30px;
+            }
+            .info__wrap{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
             }
         }
     }

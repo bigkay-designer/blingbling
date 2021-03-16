@@ -26,15 +26,19 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <div className="payment__app__div">
+            <Route path="/orders">
+              <Orders />
+            </Route>
+            <Route path="/payment">
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
+            </Route>
+          </div>
+        </Switch>
+        <Switch>
           {/* payment and checkout */}
-          <Route path="/orders">
-            <Orders />
-          </Route>
-          <Route path="/payment">
-            <Elements stripe={promise}>
-              <Payment />
-            </Elements>
-          </Route>
           <div className="main__div">
             <Route path="/checkout">
               <Checkout />

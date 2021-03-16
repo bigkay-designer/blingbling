@@ -1,7 +1,3 @@
-.payment {
-  margin-top: 52px;
-}
-
 .payment .checkout__amount {
   text-align: center;
   color: grey;
@@ -86,6 +82,7 @@
 }
 
 .payment .payment__container .payment__section .payment__body form .pay__btn button {
+  border: none;
   width: 100%;
   background-color: #3b9af3;
   color: #fff;
@@ -99,7 +96,7 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   height: 350px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .payment .payment__container .wrapper .product {
@@ -108,56 +105,78 @@
           box-shadow: 0px 2px 4px grey;
   padding: 10px 0;
   border-radius: 12px;
-  margin: 0px 0 20px;
+  margin: 20px 10px;
 }
 
 .payment .payment__container .wrapper .product .product__flex {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 30% 50% 20%;
-      grid-template-columns: 30% 50% 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment .payment__container .wrapper .product .product__flex .img {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .payment .payment__container .wrapper .product .product__flex .img img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .payment .payment__container .wrapper .product .product__flex .product__body {
   padding: 0 10px;
   margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
-.payment .payment__container .wrapper .product .product__flex .product__body h3 {
+.payment .payment__container .wrapper .product .product__flex .product__body .body__content {
+  margin-left: 10px;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body ul {
+  padding: 0;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body ul li {
+  margin: 0 0 10px;
+  font-size: 14px;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.payment .payment__container .wrapper .product .product__flex .product__body ul li span {
+  font-size: 16px;
   font-weight: 600;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
-.payment .payment__container .wrapper .product .product__flex .product__body p {
-  margin: 10px 0;
-  color: #424242;
+.payment .payment__container .wrapper .product .product__flex .product__body ul li .colon__span {
+  display: none;
 }
 
-.payment .payment__container .wrapper .product .product__flex .product__body .price {
-  font-weight: 700;
-  color: #000;
+.payment .payment__container .wrapper .product .product__flex .product__body ul li p {
+  margin-top: 7px;
 }
 
-.payment .payment__container .wrapper .product .product__flex .icon__div {
+.payment .payment__container .wrapper .product .icon__div {
   padding-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.payment .payment__container .wrapper .product .product__flex .icon__div svg {
+.payment .payment__container .wrapper .product .icon__div svg {
   cursor: pointer;
   color: #3b3b3b;
 }
@@ -165,5 +184,60 @@
 .payment .payment__container .wrapper .product .product__size {
   margin-top: 10px;
   padding: 10px;
+}
+
+@media screen and (min-width: 560px) and (min-width: 1080px) {
+  .payment .payment__container .wrapper {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 560px) and (min-width: 860px) {
+  .payment .payment__container .wrapper .product {
+    border: none !important;
+    border-bottom: 1px solid #eddede !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .payment .payment__container .wrapper .product .product__flex .product__body .body__content {
+    width: 100%;
+  }
+  .payment .payment__container .wrapper .product .product__flex .product__body ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 560px) and (min-width: 860px) {
+  .payment .payment__container .wrapper .product .product__flex .product__body ul {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 560px) and (min-width: 760px) {
+  .payment .payment__container .payment__section .payment__body form {
+    max-width: 65%;
+  }
+  .payment .payment__container .payment__section .payment__body form .pay__btn {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+  }
+  .payment .payment__container .payment__section .payment__body form .pay__btn button {
+    padding: 10px 0;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=Payment.css.map */

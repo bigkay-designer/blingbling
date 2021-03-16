@@ -27,20 +27,33 @@ function Header() {
     return (
         <div className="header">
             <div className="header__wrapper">
-                <div onClick={()=> setOpenNav(true)} className="header__small__nav">
-                    <Menu className="icon" />
+                <div className="main__wrapper">
+                    <div onClick={()=> setOpenNav(true)} className="header__small__nav">
+                        <Menu className="icon" />
+                    </div>
+                    <div onClick={toTopPage} className="header__logo">
+                        <h2> <Link to='/'>BLINGBLING</Link> </h2>
+                    </div>
+                    <div className="header__cart">
+                        <Link to="checkout">
+                            <ShoppingBasket className="icon" />
+                            <div className="item__in__basket">
+                                <span>{basket?.length}</span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
-                <div onClick={toTopPage} className="header__logo">
-                    <h2> <Link to='/'>BLINGBLING</Link> </h2>
-                </div>
-                <div className="header__cart">
-                    <Link to="checkout">
-                        <ShoppingBasket className="icon" />
-                        <div className="item__in__basket">
-                            <span>{basket?.length}</span>
+                <section className={`search`}>
+                    <form >
+                        <div className="input__field">
+                            <Search className="icon" />
+                            <input type="text" placeholder="I am searching for ..." />
                         </div>
-                    </Link>
-                </div>
+                        {/* <div className="search__btn">
+                            <Button>Search</Button>
+                        </div> */}
+                    </form>
+                </section>
             </div>
             <div className={` header__nav__container ${openNav && "show__nav"} `}>
                 <nav className="header__nav">

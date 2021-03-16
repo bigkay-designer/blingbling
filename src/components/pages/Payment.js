@@ -118,17 +118,21 @@ function Payment() {
                                         <img src={data.img} alt=""/>
                                     </div>
                                     <div className="product__body">
-                                        <h3>{data.title}</h3>
-                                        <p>item code: {data.id}</p>
-                                        <p>Quantity: {data.quantity}</p>
-                                        <p>Size: {data.size}</p>
-                                        <p className="price">£{data.price}</p>
+                                        <div className="body__content">
+                                            <ul>
+                                                <li><span>Item description <span className="colon__span">:</span> </span> <p> {data.title} </p> </li>
+                                                <li><span>item code <span className="colon__span">:</span> </span> <p> {data.id} </p> </li>
+                                                <li><span>size <span className="colon__span">:</span> </span> <p> {data.size} </p> </li>
+                                                <li><span>quantity <span className="colon__span">:</span> </span> <p> {data.quantity} </p> </li>
+                                                <li><span>price <span className="colon__span">:</span> </span> <p> £{data.price} </p> </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div onClick={()=> removeFromBasket(data.id)} className="icon__div">
+                                    <div onClick={()=> removeFromBasket (data.id, data.size)} className="icon__div">
                                         <Delete />
                                     </div>
                                 </div>
-                            </div>
+                           </div>
                             
                         ))}
                      </div>

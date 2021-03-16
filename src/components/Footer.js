@@ -6,17 +6,19 @@ function Footer() {
     return (
         <div className="footer">
             <div className="newsletter">
-                <div className="title">
-                    <h2>Sign up to our newsletter</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vel.</p>
-                </div>
-                <div className="input">
-                    <form >
-                        <input type="text" placeholder="Your Emaill" required />
-                        <div className="btn">
-                            <Button>Sign up</Button>
-                        </div>
-                    </form>
+                <div className="newsletter__container">
+                    <div className="title">
+                        <h2>Sign up to our newsletter</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vel.</p>
+                    </div>
+                    <div className="input">
+                        <form >
+                            <input type="text" placeholder="Your Emaill" required />
+                            <div className="btn">
+                                <Button>Sign up</Button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div className="footer__section">
@@ -30,31 +32,33 @@ function Footer() {
                         <Twitter className="icon twitter" />
                     </div>
                 </div>
-                <div className="company__info">
+                <div className="info__wrap">
+                    <div className="company__info">
+                        <div className="title">
+                            <h2>Company information</h2>
+                        </div>
+                        <nav>
+                            <ul> 
+                                <li>about us</li>
+                                <li>careers</li>
+                                <li>privacy & policy</li>
+                                <li>Terms & conditions </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="customer__service">
                     <div className="title">
-                        <h2>Company information</h2>
+                            <h2>customer services</h2>
+                        </div>
+                        <nav>
+                            <ul> 
+                                <li>contact us</li>
+                                <li>Delivery & Cookies</li>
+                                <li>Returns</li>
+                                <li>FAQs</li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav>
-                        <ul> 
-                            <li>about us</li>
-                            <li>careers</li>
-                            <li>privacy & policy</li>
-                            <li>Terms & conditions </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="customer__service">
-                <div className="title">
-                        <h2>customer services</h2>
-                    </div>
-                    <nav>
-                        <ul> 
-                            <li>contact us</li>
-                            <li>Delivery & Cookies</li>
-                            <li>Returns</li>
-                            <li>FAQs</li>
-                        </ul>
-                    </nav>
                 </div>
                 <div className="copyright">
                     <p>© 2001 - 2021  The Jewellers Ltd</p>
