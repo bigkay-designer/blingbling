@@ -132,7 +132,7 @@
 
 @media screen and (min-width: 860px) {
   .footer .newsletter .newsletter__container {
-    width: 85%;
+    width: 65%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -144,7 +144,7 @@
             align-items: center;
   }
   .footer .newsletter .newsletter__container .input {
-    width: 50%;
+    width: 40%;
   }
   .footer .footer__section .socials {
     max-width: 65%;
@@ -154,8 +154,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

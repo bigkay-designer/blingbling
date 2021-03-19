@@ -114,9 +114,8 @@
 
 .product__pages .products__container .products .product__size select {
   width: 100%;
-  height: 40px;
   font-size: 16px;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .product__pages .products__container .products .product__size .bg_color {
@@ -170,6 +169,11 @@
   .product__pages .products__container {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+  .product__pages .products__container .products {
+    width: 85%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 /*# sourceMappingURL=Product.css.map */

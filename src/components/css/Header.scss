@@ -12,7 +12,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            padding: 10px 10px 0;
         }
         .header__logo{
             h2{
@@ -64,7 +64,9 @@
                 align-items: center;
                 border: 1px solid #ada8a8;
                 padding: 5px 10px;
+                background-color: rgb(240, 240, 240);
                 input{
+                    background-color: rgb(240, 240, 240);
                     font-size: 16px;
                     border: none;
                     outline: none;
@@ -201,16 +203,16 @@
         .header__wrapper{
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             .main__wrapper{
-
-                width: 70%;
+                width: 80%;
             }
             .search{
-                width: 30%;
+                width: 20%;
                 form{
                     .input__field{
-                        width: 95%;
+                        width: 100%;
+                        padding: 10px;
                     }
                 }
             }
@@ -224,7 +226,7 @@
             height: auto;
             box-shadow: none;
             position: relative;
-            padding: 10px 0;
+            padding: 5px 0;
             border: 1px solid #eddede;
             .header__nav{
                 ul{
@@ -248,5 +250,16 @@
             }
         }
 
+    }
+}
+
+@media screen and (min-width:1160px){
+    .header{
+        .header__nav__container{
+            .header__nav{
+                max-width: 75%;
+                margin: 0 auto;
+            }
+        }
     }
 }

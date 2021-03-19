@@ -1,94 +1,111 @@
 import React from 'react'
 import {LocalShipping, CalendarToday, Public} from '@material-ui/icons'
+import {Button} from '@material-ui/core'
 import './css/Landing.css'
 function Landing() {
     return (
         <div className="landing">
-            <section className="showCase">
-                <div className="overlay"></div>
-                <div className="title">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo eligendi dolor. Nobis reiciendis ducimus ad dolorem porro quisquam laboriosam?</p>
+            <div className="landing__container">
 
-                </div>
-                <div className="img">
-                    <img src="https://www.pngkey.com/png/full/19-191849_watch-rolex-cosmograph-daytona-automatic-mens-watch-18k.png" alt="image"/>
+                <section className="showcase">
+                    <div className="img">
+                        <img className="first__img" src="https://media.tiffany.com/is/image/tiffanydm/NewJewelry_Tcolor_BrowseGridHero_USExclusive_Mobile?$tile$&wid=720" alt=""/>
+                        <img className="second__img" src="https://media.tiffany.com/is/image/tiffanydm/NewJewelry_Tcolor_BrowseGridHero_USExclusive_Desktop?$tile$&wid=2992" alt=""/>
+                    </div>
+                    <div className="content">
+                        <h2>Lorem, ipsum dolor.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maiores, pariatur iste beatae et ex amet optio vel deleniti earum?</p>
+                        <Button>Shop All</Button>
+                    </div>
+                </section>
 
-                </div>
-            </section>
-
-            <section className="welcome__msg">
-                <h2>Welcome to BLINGBLING</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus cum sapiente explicabo vero voluptatum, ab accusantium impedit suscipit quidem unde pariatur exercitationem magni maxime quod reprehenderit. Vel numquam labore tenetur.</p>
-            </section>
-            <section className="top__collection">
-            <div className="title">
-                    <h3>Top Collections</h3>
-                </div>
-                <div className="wrapper">
-                    <div className="product product1">
-                        <div className="img">
-                            <img src="https://lh3.googleusercontent.com/proxy/cxEGrdZ-mrOaQjkOwtQh1eL0YNCrwD9e18ZzXrh4gkRzovq1CK_dtiGAHAUbsZ1LDod8BfJ-HbMVn6F_ty9aSbAU2g54pOCufkdtEo9OyKuTzeXhKi1rtvsO4ueRUA" alt=""/>
+                <section className="main__sellers">
+                    <div className="product__container">
+                        <div className="content">
+                            <div className="img">
+                                <img src="https://lh3.googleusercontent.com/proxy/TrsH8Au0jfpjdJwQ0yUl992DyRz4PS_-89CEv_B4nGg8L29oFACbscVt8Gv2hR7SM8yODSLuS3neE2JWYLDy0jLPNxohPGc4dQHQMzDBXMMANEdwu6o" alt=""/>
+                            </div>
+                            <div className="body">
+                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi.</p>
+                                <Button>Shop now</Button>
+                            </div>
                         </div>
-                        <h3>Shop GUCCI</h3>
-                    </div>
-                    <div className="product product2">
-                        <div className="img">
-                            <img src="https://freepngimg.com/thumb/watch/22656-5-rolex-watch-transparent.png" alt=""/>
+                        <div className="content">
+                            <div className="img">
+                                <img src="https://static.wixstatic.com/media/2cd43b_9647e1ea59f749d1aa7c06b1a634327a~mv2.png/v1/fill/w_640,h_1056,fp_0.50_0.50,q_95/2cd43b_9647e1ea59f749d1aa7c06b1a634327a~mv2.png" alt=""/>
+                            </div>
+                            <div className="body">
+                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi.</p>
+                                <Button>Shop now</Button>
+                            </div>
                         </div>
-                        <h3>Shop PRADA</h3>
                     </div>
-                    <div className="product product3">
-                        <div className="img">
-                            <img src="http://pngimg.com/uploads/watches/watches_PNG9880.png" alt=""/>
+                </section>
+                
+                <section className="featured__products">
+                    <div className="product__container">
+                        <div className="content">
+                            <div className="img">
+                                <img src="https://lh3.googleusercontent.com/proxy/TrsH8Au0jfpjdJwQ0yUl992DyRz4PS_-89CEv_B4nGg8L29oFACbscVt8Gv2hR7SM8yODSLuS3neE2JWYLDy0jLPNxohPGc4dQHQMzDBXMMANEdwu6o" alt=""/>
+                            </div>
+                            <div className="body">
+                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi.</p>
+                                <Button>Shop now</Button>
+                            </div>
                         </div>
-                        <h3>Shop CHANEL</h3>
+                        <div className="content">
+                            <div className="img">
+                                <img src="https://static.wixstatic.com/media/2cd43b_9647e1ea59f749d1aa7c06b1a634327a~mv2.png/v1/fill/w_640,h_1056,fp_0.50_0.50,q_95/2cd43b_9647e1ea59f749d1aa7c06b1a634327a~mv2.png" alt=""/>
+                            </div>
+                            <div className="body">
+                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi.</p>
+                                <Button>Shop now</Button>
+                            </div>
+                        </div>
+                        <div className="content">
+                            <div className="img">
+                                <img src="https://www.bulgari.com/dw/image/v2/BCSG_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw0cf33d30/images/images/1153765.png?sw=640" alt=""/>
+                            </div>
+                            <div className="body">
+                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, excepturi.</p>
+                                <Button>Shop now</Button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-
-            <section className="featured__products">
-                <div className="title">
-                    <h3>Featured Products</h3>
-                </div>
-                <div className="wrapper">
-                    <div className="product">
-                        <img src="https://i.pinimg.com/originals/82/59/93/82599369344d8092ba84d4ce50676dde.png" alt=""/>
-                        <h3>Ermani</h3>
+                </section>
+                
+                
+                <section className="delivery__info">
+                    <div className="title">
+                        <h3>Delivery Information</h3>
                     </div>
-                    <div className="product">
-                        <img src="https://static.wixstatic.com/media/2cd43b_ac62e74cf8e04266afbb7932d162ac2f~mv2.png/v1/fill/w_640,h_638,fp_0.50_0.50,q_95/2cd43b_ac62e74cf8e04266afbb7932d162ac2f~mv2.png" alt=""/>
-                        <h3>Apple</h3>
+                    <div className="delivery__container">
+                        <div className="body">
+                            <div className="icon__div">
+                                <LocalShipping className="icon" />
+                            </div>
+                            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
+                        </div>
+                        <div className="body">
+                            <div className="icon__div">
+                                <CalendarToday className="icon" />
+                            </div>
+                            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
+                        </div>
+                        <div className="body">
+                            <div className="icon__div">
+                                <Public className="icon" />
+                            </div>
+                            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
+                        </div>
                     </div>
-                    <div className="product">
-                        <img src="https://www.freepnglogos.com/uploads/watch-png/download-rolex-watch-photos-png-image-pngimg-21.png" alt=""/>
-                        <h3>Casio</h3>
-                    </div>
-                </div>
-            </section>
-
-            <section className="delivery__info">
-                <div className="title">
-                    <h3>Delivery Information</h3>
-                </div>
-                <div className="body">
-                    <div className="icon__div">
-                        <LocalShipping className="icon" />
-                    </div>
-                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
-                </div>
-                <div className="body">
-                    <div className="icon__div">
-                        <CalendarToday className="icon" />
-                    </div>
-                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
-                </div>
-                <div className="body">
-                    <div className="icon__div">
-                        <Public className="icon" />
-                    </div>
-                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quis!</h3>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     )
 }

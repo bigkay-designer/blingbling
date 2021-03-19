@@ -119,12 +119,12 @@
     .footer{
         .newsletter{
             .newsletter__container{
-                width: 85%;
+                width: 65%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 .input{
-                    width: 50%;
+                    width: 40%;
                 }
             }
         }
@@ -135,7 +135,7 @@
             }
             .info__wrap{
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 align-items: center;
             }
         }
